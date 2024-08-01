@@ -6,7 +6,7 @@ A flutter app that shows the current amount of cash the user has, a page where t
 
 ## Running the app
 
-Please use flutter v12312312
+Please use flutter v3.22.3
 
 Clone the project
 
@@ -25,6 +25,11 @@ Install dependencies
 ```bash
   flutter pub get
 ```
+Generate files
+
+```bash
+  dart run build_runner build --delete-conflicting-outputs --verbose 
+```
 
 #### This is optional.
 
@@ -32,7 +37,7 @@ Install flutter version manager on your computer. Follow this [documention](http
 
 After installation, run this on the project root directory:
 ```bash
-  fvm install rthrt
+  fvm install 3.22.3
 ```
 This should generate a `.fvm` folder. Make sure, in your IDE, the flutter version you are using is pointing to `.fvm/flutter_sdk`. This points to the flutter version you are currently using in flutter version manager.
 
@@ -40,5 +45,9 @@ Then run:
 
 ```bash
   fvm flutter pub get
+```
+and
+```bash
+  fvm dart run build_runner build --delete-conflicting-outputs --verbose
 ```
 
