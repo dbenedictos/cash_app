@@ -6,9 +6,9 @@ part 'wallet.g.dart';
 @freezed
 class Wallet with _$Wallet {
   factory Wallet({
-    int? id,
-    int? user,
-    double? balance,
+    required int id,
+    required int user,
+    required double balance,
   }) = _Wallet;
 
   factory Wallet.fromJson(Map<String, dynamic> json) => _$WalletFromJson(json);

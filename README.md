@@ -30,7 +30,13 @@ Generate files
 ```bash
   dart run build_runner build --delete-conflicting-outputs --verbose 
 ```
-
+### To run the unit test.
+```bash
+  flutter pub global activate test_cov_console
+```
+```bash
+  flutter test --coverage && flutter pub global run test_cov_console
+```
 #### This is optional.
 
 Install flutter version manager on your computer. Follow this [documention](https://fvm.app/documentation/getting-started/installation)
@@ -50,4 +56,5 @@ and
 ```bash
   fvm dart run build_runner build --delete-conflicting-outputs --verbose
 ```
+For running the unit test. The steps are the same as above but always `fvm` before `flutter`
 

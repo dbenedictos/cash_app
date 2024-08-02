@@ -10,7 +10,15 @@ dependencies:
   flutter:
     sdk: flutter
 
+  auto_size_text_field: any
+
   cupertino_icons: ^1.0.6
+
+  dartx: any
+
+  dio: any
+
+  equatable: any
 
   flutter_bloc: ^8.1.6
 
@@ -18,7 +26,11 @@ dependencies:
 
   freezed_annotation: any
 
+  get_it: any
+
   go_router: any
+
+  intl: any
 
   json_annotation: any
 
