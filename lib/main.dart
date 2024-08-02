@@ -8,26 +8,36 @@ final navigatorKey = GlobalKey<NavigatorState>();
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
-  runApp(const MyApp());
+  final appStateCubit = AppStateCubit(AppState.init());
+
+  runApp(CashApp(appStateCubit: appStateCubit));
 }
 
-class CounterCubit extends Cubit<AppState> {
-  CounterCubit(super.initialState);
+class AppStateCubit extends Cubit<AppState> {
+  AppStateCubit(super.initialState);
 
   void increment() {
     emit(state.copyWith(counter: state.counter + 1));
   }
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class CashApp extends StatelessWidget {
+  const CashApp({
+    required this.appStateCubit,
+    super.key,
+  });
+
+  final AppStateCubit appStateCubit;
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      title: 'Cash App',
-      routerConfig: router,
+    return BlocProvider(
+      create: (_) => appStateCubit,
+      child: MaterialApp.router(
+        title: 'Cash App',
+        routerConfig: router,
+      ),
     );
   }
 }

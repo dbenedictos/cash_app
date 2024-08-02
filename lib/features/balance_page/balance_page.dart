@@ -8,7 +8,7 @@ class BalancePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final counterCubit = CounterCubit(AppState.init());
+    final counterCubit = AppStateCubit(AppState.init());
 
     return Scaffold(
       appBar: AppBar(
@@ -22,7 +22,7 @@ class BalancePage extends StatelessWidget {
             const Text(
               'You have pushed the button this many times:',
             ),
-            BlocBuilder<CounterCubit, AppState>(
+            BlocBuilder<AppStateCubit, AppState>(
                 bloc: counterCubit,
                 builder: (context, state) {
                   return Text(
