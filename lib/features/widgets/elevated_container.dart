@@ -13,10 +13,6 @@ class ElevatedContainer extends StatelessWidget {
   final EdgeInsets? padding;
   final EdgeInsets? margin;
 
-  int heh1() {
-    return 1 + 2;
-  }
-
   int hehe3() {
     return 1 + 2;
   }

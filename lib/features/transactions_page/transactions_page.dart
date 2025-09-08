@@ -13,6 +13,10 @@ class TransactionsPage extends StatelessWidget {
 
   final int userId;
 
+  int hehe3() {
+    return 1 + 2;
+  }
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
