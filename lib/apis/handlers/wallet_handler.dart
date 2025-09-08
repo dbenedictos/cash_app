@@ -3,7 +3,7 @@ import 'package:cash_app/apis/models/wallet.dart';
 
 class WalletApi {
   WalletApi(this.apiClient);
-
+//
   final ApiClient apiClient;
 
   Future<Wallet> getByUser(int userId) async {
