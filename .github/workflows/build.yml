@@ -14,6 +14,12 @@ jobs:
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
       # The analysis requires to retrieve dependencies and build successfully
+      - name: Install flutter
+        uses: subosito/flutter-action@v2.5.0
+        with:
+          channel: stable
+          cache: true
+          architecture: x64
       - name: Build
         run: |
           flutter pub get
