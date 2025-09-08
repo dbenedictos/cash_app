@@ -4,6 +4,7 @@ import 'package:cash_app/apis/models/user.dart';
 import 'package:cash_app/apis/models/wallet.dart';
 import 'package:cash_app/main.dart';
 
+//
 class CashAppRepository {
   CashAppApiService get _api => getIt<CashAppApiService>();
 

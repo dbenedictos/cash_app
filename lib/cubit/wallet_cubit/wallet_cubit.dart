@@ -4,6 +4,7 @@ import 'package:cash_app/repositories/cash_app_repository.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+//
 class WalletCubit extends Cubit<AsyncState<Wallet>> {
   WalletCubit(this._repository) : super(const AsyncState.loading());
 
