@@ -17,6 +17,10 @@ class ElevatedContainer extends StatelessWidget {
     return 1 + 2;
   }
 
+  int hehe4() {
+    return 1 + 2;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
